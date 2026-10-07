@@ -1160,7 +1160,17 @@ body:not(.page-main) main>.bottom .font {
   font-size:clamp(40px,5.5vw,88px); color:#ffffff20; line-height:1;
   font-weight:800; letter-spacing:.04em; opacity:1; white-space:nowrap;
 }
-.page-more .box:hover img,.page-more .box:focus-within img { transform:scale(1.04); }
+/* Adjust these two values to tune poster hover. */
+.page-more {
+  --poster-hover-scale:1.08;
+  --poster-hover-duration:0.65s;
+}
+.page-more .box img {
+  transition:transform var(--poster-hover-duration) cubic-bezier(.22,.61,.36,1);
+}
+.page-more .box:hover img,.page-more .box:focus-within img {
+  transform:scale(var(--poster-hover-scale));
+}
 @media(max-width:700px) {
   body:not(.page-main)>main { padding-bottom:65px; }
   body.page-oper>main { padding-bottom:0; }
