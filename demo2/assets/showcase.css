@@ -1,19 +1,5 @@
 /* Full-screen composition for the three showcase pages. */
 .page-main,.page-oper,.page-more { background-color:#050708; }
-.page-main .navbar,.page-oper .navbar,.page-more .navbar {
-  position:absolute; inset:0 0 auto; height:90px; background:linear-gradient(#000e,#0008,transparent);
-  border-bottom:0; padding:20px 3%;
-}
-.page-main .site-footer,.page-oper .site-footer,.page-more .site-footer {
-  padding:10px 3%; font-size:10px; background:#050708; border-top:0;
-}
-.page-main .navbar-center,.page-oper .navbar-center,.page-more .navbar-center {
-  width:65%; max-width:1220px; justify-content:space-between; gap:20px;
-}
-.page-main .nav-item,.page-oper .nav-item,.page-more .nav-item { border-bottom:0; }
-.page-main .nav-item .en,.page-oper .nav-item .en,.page-more .nav-item .en {
-  font-family:Impact,"Arial Narrow",Arial,sans-serif; font-size:18px; font-weight:400; letter-spacing:0;
-}
 .page-main main { min-height:calc(100svh - 34px); display:block; padding:0; overflow:hidden; }
 .page-main main:before { background:linear-gradient(90deg,#0004,transparent 50%,#0002); }
 .page-main .box-left {
@@ -107,8 +93,6 @@
   .page-oper #character-description { font-size:15px; }
 }
 @media(max-width:1050px) and (min-width:701px) {
-  .page-main .navbar,.page-oper .navbar,.page-more .navbar { height:125px; }
-  .page-main .navbar-center,.page-oper .navbar-center,.page-more .navbar-center { width:100%; max-width:none; }
   .page-oper .box-left { top:23%; width:40%; left:5%; }
   .page-oper .container { --art-size:1350px; --art-top:30px; }
   .page-oper .image-display img { left:78%; }
@@ -118,9 +102,6 @@
   .more-subtitle { white-space:normal; }
 }
 @media(max-width:700px) {
-  .page-main .navbar,.page-oper .navbar,.page-more .navbar { height:auto; min-height:76px; position:relative; padding:16px; background:#050708; }
-  .page-main .navbar-center,.page-oper .navbar-center,.page-more .navbar-center { width:100%; gap:10px; }
-  .page-main .nav-item .en,.page-oper .nav-item .en,.page-more .nav-item .en { font-size:14px; }
   .page-main main { min-height:690px; }
   .page-main .box-left { top:0; width:70%; opacity:.35; }
   .page-main .links-container { right:12px; top:45%; width:116px; gap:7px; }
