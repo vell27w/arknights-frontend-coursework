@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="loginCss.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="picture/logo.76a7eacc18f08a965dad.png" alt="Hypergryph Logo">
+        </div>
+        <form class="login-form" onsubmit="return validateForm()">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="请输入账号">
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="请输入密码">
+            </div>
+            <div class="agreement">
+                <input type="checkbox" id="agreement">
+                <label for="agreement">已同意《用户注册协议》《个人信息保护政策》和《儿童个人信息保护政策》</label>
+            </div>
+            <button type="submit" class="submit-button">登录</button>
+        </form>
+    </div>
+</body>
+<script>
+    function validateForm() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === '') {
+        alert('请填写账号');
+        return false;
+    }
+    if (password === '') {
+        alert('请填写密码');
+        return false;
+    }
+
+    location.href = 'main.html';
+    return false;
+}
+</script>
+</html>

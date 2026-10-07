@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>角色切换页面</title>
+    <link rel="stylesheet" href="oper.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <div class="logoBox">
+                <img class="logo" src="picture/Logo_明日方舟.svg"></img>
+            </div>
+        </div>
+        <div class="navbar-center-right">
+            <div class="navbar-center">
+                <a href="main.html" class="nav-item">
+                    <div class="en">INDEX</div>
+                    <div class="cn">首页</div>
+                </a>
+                <a href="info.html" class="nav-item">
+                    <div class="en">INFORMATION</div>
+                    <div class="cn">情报</div>
+                </a>
+                <a href="oper.html" class="nav-item">
+                    <div class="en">OPERATOR</div>
+                    <div class="cn">干员</div>
+                </a>
+                <a href="world.html" class="nav-item">
+                    <div class="en">WORLD</div>
+                    <div class="cn">设定</div>
+                </a>
+                <a href="media.html" class="nav-item">
+                    <div class="en">MEDIA</div>
+                    <div class="cn">泰拉万象</div>
+                </a><a href="more.html" class="nav-item">
+                    <div class="en">MORE</div>
+                    <div class="cn">更多内容</div>
+                </a>
+            </div>
+            <div class="navbar-right">
+                <img class="icon" src="picture/分享.svg" alt="Icon 1">
+                <img class="icon" src="picture/音波音乐声音.svg" alt="Icon 2">
+                <img class="icon" src="picture/用户.svg" alt="Icon 3">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box-left">
+            <div class="profile">
+                <div class="info">
+                    <h1 id="character-name">凯尔希</h1>
+                    <div id="character-description">
+                        罗德岛最高管理者之一，阿米娅的直接辅导者。
+                        罗德岛医疗部门的总负责人。
+                        作为罗德岛的老成员，凯尔希医生是在阿米娅背后最稳固的援护者。
+                    </div>
+                </div>
+            </div>
+            <div class="thumbnails">
+                <img src="picture/operator/kaltsit.05c0f5e1.png" alt="凯尔希" class="thumbnail" data-image="picture/operator/立绘_凯尔希_1.png" data-name="凯尔希" data-description=
+                "罗德岛最高管理者之一，阿米娅的直接辅导者。
+                罗德岛医疗部门的总负责人。
+                作为罗德岛的老成员，凯尔希医生是在阿米娅背后最稳固的援护者。">
+                <img src="picture/operator/amiya.a410de75.png" alt="阿米娅" class="thumbnail" data-image="picture/operator/立绘_阿米娅_1.png" data-name="阿米娅" data-description=
+                "罗德岛的公开领袖，在内部拥有最高执行权。虽然，从外表上看起来仅仅是个不成熟的少女，实际上，她却是深受大家信任的合格的领袖。现在，阿米娅正带领着罗德岛，为了感染者的未来，为了让这片大地挣脱矿石病的阴霾而不懈努力。">
+                <img src="picture/operator/chen.4d5cd8a0.png" alt="陈" class="thumbnail" data-image="picture/operator/立绘_陈_1.png" data-name="陈" data-description=
+                "陈，龙门高级警司，龙门近卫局特别督查组组长，毕业于维多利亚皇家近卫学校，成绩优异，表现突出。在龙门近卫局供职期间，力主取缔龙门境内非法活动，对抗暴力犯罪和有组织犯罪，追缉武装逃犯与国际重犯等行动，并取得多项重大成果。
+                现作为特别人员协助罗德岛行动，并为现场提供战术指挥支援。">
+                <img src="picture/operator/texas.5a198d4c.png" alt="德克萨斯" class="thumbnail" data-image="picture/operator/立绘_德克萨斯_1.png" data-name="德克萨斯" data-description=
+                "企鹅物流员工，单兵作战能力出类拔萃。
+                于合约期内任企鹅物流驻罗德岛联络人员，同时为罗德岛的多项行动提供协助。">
+            </div>
+        </div>
+        
+        <div class="image-display">
+            <img id="main-image" src="picture/operator/立绘_凯尔希_1.png" alt="角色图片">
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div class="font">OPERATOR</div>
+    </div>
+
+    <script>
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const mainImage = document.getElementById('main-image');
+        const characterName = document.getElementById('character-name');
+        const characterDescription = document.getElementById('character-description');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                const newImage = thumbnail.getAttribute('data-image');
+                const newName = thumbnail.getAttribute('data-name');
+                const newDescription = thumbnail.getAttribute('data-description');
+
+                mainImage.src = newImage;
+                characterName.textContent = newName;
+                characterDescription.textContent = newDescription;
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    // 移除所有thumbnail的selected类
+                    thumbnails.forEach(img => img.classList.remove('selected'));
+                    // 给当前点击的图片添加selected类
+                    this.classList.add('selected');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

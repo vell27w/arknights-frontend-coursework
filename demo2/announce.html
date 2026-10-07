@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            background-image: url('picture/bg.c03d00a6.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            height: 10%;
+            box-sizing: border-box;
+            background-color: black;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            width: 100px;
+            height: auto;
+        }
+
+        .navbar-center-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 1;
+        }
+
+        .navbar-center {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-right {
+            display: flex;
+            align-items: center;
+            margin-left: 20px; 
+        }
+
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 0px 23px;
+            text-align:left;
+        }
+
+        .nav-item .en{
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .nav-item .cn{
+            font-size: 10px;
+        }
+
+        .nav-item:hover {
+            transition: 0.5s;
+            color: aqua;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin-left: 20px;
+            transition: transform 0.3s;
+        }
+
+        .icon:hover {
+            transform: scale(1.2);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        .date {
+            color: #999;
+            margin-bottom: 20px;
+        }
+        .content {
+            line-height: 1.6;
+        }
+        .highlight {
+            color: #ff0;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <div class="logoBox">
+                <img class="logo" src="picture/Logo_明日方舟.svg"></img>
+            </div>
+        </div>
+        <div class="navbar-center-right">
+            <div class="navbar-center">
+                <a href="main.html" class="nav-item">
+                    <div class="en">INDEX</div>
+                    <div class="cn">首页</div>
+                </a>
+                <a href="info.html" class="nav-item">
+                    <div class="en">INFORMATION</div>
+                    <div class="cn">情报</div>
+                </a>
+                <a href="oper.html" class="nav-item">
+                    <div class="en">OPERATOR</div>
+                    <div class="cn">干员</div>
+                </a>
+                <a href="world.html" class="nav-item">
+                    <div class="en">WORLD</div>
+                    <div class="cn">设定</div>
+                </a>
+                <a href="#" class="nav-item">
+                    <div class="en">MEDIA</div>
+                    <div class="cn">泰拉万象</div>
+                </a><a href="more.html" class="nav-item">
+                    <div class="en">MORE</div>
+                    <div class="cn">更多内容</div>
+                </a>
+            </div>
+            <div class="navbar-right">
+                <img class="icon" src="picture/分享.svg" alt="Icon 1">
+                <img class="icon" src="picture/音波音乐声音.svg" alt="Icon 2">
+                <img class="icon" src="picture/用户.svg" alt="Icon 3">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>公告 [明日方舟]04月01日16:00闪断更新公告</h1>
+        <div class="date">2025 // 04 / 01</div>
+        <div class="content">
+            <p>感谢您对《明日方舟》的关注与支持。《明日方舟》计划将于2025年04月01日16:00 ~ 16:10期间进行服务器闪断更新。届时将造成玩家强制掉线，无法登录等问题。为确保您的游戏内账号数据正常，请在本次闪断更新时提前结束关卡。本次更新给各位玩家带来的不便，敬请谅解！</p>
+            <p class="highlight">闪断更新时间：</p>
+            <p>2025年04月01日16:00 ~ 16:10期间</p>
+            <p class="highlight">更新内容：</p>
+            <ul>
+                <li>部分活动资源预载</li>
+                <li>04月03日04:00【中坚寻访】更新资源预载</li>
+                <li>04月03日04:00【采购中心-通用凭证区&高级凭证区】更新（可兑换干员：伊芙利特、德克萨斯）资源预载</li>
+                <li>修复【促融共竞#1】关卡【IG-2】、【IG-5】特定情况下嘉奖印章获取异常的问题</li>
+                <li>修复【促融共竞#1】关卡【IG-FT-1】中，部分敌人路径异常的问题</li>
+                <li>修复干员【伺夜】携带2级、3级专属模组【时光不再】时，特定情况下天赋【狼群天性】效果异常的问题</li>
+                <li>修复干员【琴柳】携带2级、3级专属模组【“友谊万岁”】时，特定情况下天赋【精神感召】效果异常的问题</li>
+                <li>修复【促融共竞#1】堡垒守御项目中部分“场地设施”在特定情况下会异常回复技力的问题</li>
+                <li>部分文本优化及错误修正</li>
+            </ul>
+        </div>
+    </div>
+    <div style="text-align: center; margin: 30px 0;">
+        <a href="info.html" style="
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        " onmouseover="this.style.backgroundColor='rgba(255,255,255,0.3)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'">
+            ← 返回情报页
+        </a>
+    </div>
+</body>
+</html>

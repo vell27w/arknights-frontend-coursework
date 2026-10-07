@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            margin: 0; /* 去除默认边距 */
+            height: 100vh; /* 让页面高度充满视口 */
+        }
+        .left {
+            flex: 7;
+            background-image: url('picture/comic1.jpg');
+            background-size: cover;
+            background-position: 10% center; /* 显示偏右 */
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .right{
+            flex: 3;
+            background-image: url('picture/bg.c03d00a6.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right img {
+            width: 80%;
+            height: auto;
+            object-fit: cover;
+            margin: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+         /* 底部定位Div样式 */
+         .bottom-div {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+ 
+        .header {
+            max-width: 60%;
+        }
+ 
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+ 
+        .subtitle {
+            font-size: 1.2em;
+        }
+ 
+        .new {
+            color: red;
+            font-weight: bold;
+        }
+ 
+        .content {
+            text-align: center;
+        }
+ 
+        .read-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+ 
+        .chapter-info {
+            margin-top: 20px;
+        }
+ 
+        .date, .network, .tags {
+            margin: 5px 0;
+        }
+ 
+        
+    </style>
+</head>
+<body>
+    <div class="left">
+        <div class="bottom-div">
+            <div class="header">
+                <h1>暮岁闲谈：来拍电影吗</h1>
+                <p class="subtitle">这是否是比记忆更牢固的东西。</p>
+                <p class="new">NEW!</p>
+            </div>
+            <div class="content">
+                <a href="https://terra-historicus.hypergryph.com/comic/5033/episode/8639" target="_blank">
+                    <button class="read-button">开始阅读</button>
+                </a>
+                
+                <div class="chapter-info">
+                    <p>章节目录：</p>
+                    <p class="date">2025-1-28</p>
+                    <p class="network">鹰角网络</p>
+                    <p class="tags">轻松、日常、岁</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <img src="picture/comic2.png" alt="图片1">
+        <img src="picture/comic3.png" alt="图片2">
+        <img src="picture/comic4.png" alt="图片3">
+    </div>
+    
+</body>
+</html>
