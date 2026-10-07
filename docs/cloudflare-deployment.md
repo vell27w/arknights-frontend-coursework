@@ -1,5 +1,12 @@
 # Cloudflare Pages 发布与视频压缩
 
+## 当前发布状态
+
+- 正式地址：https://arknights-frontend-coursework.pages.dev/
+- 项目：`arknights-frontend-coursework`，生产分支：`main`。
+- 当前使用本地 Wrangler 直接上传，未连接 GitHub 自动部署。推送源码后需要运行 `npm run deploy` 更新线上页面。
+- 首次发布：2026-10-07；压缩视频与整站资源已上传，首页、设定页、媒体页和视频返回 200，未知路径返回 404。
+
 ## 发布目录
 
 ```sh
@@ -9,9 +16,9 @@ npm run build
 
 `dist/` 包含独立静态网站，首页是完整的 `index.html`。仓库中的报告、测试截图、开发工具和依赖不进入发布目录。构建会检查每个资源是否小于 Cloudflare Pages 的 25 MiB 限制。
 
-## 使用 GitHub 自动部署（推荐长期维护）
+## GitHub 自动部署的备选方案
 
-在 Cloudflare 的 Workers & Pages 中创建 **Pages** 项目，选择连接 GitHub：
+以下为另建 Git 集成项目时的配置参考，当前直接上传项目没有启用此方式。在 Cloudflare 的 Workers & Pages 中创建 **Pages** 项目，选择连接 GitHub：
 
 | 设置 | 值 |
 | --- | --- |
