@@ -4,6 +4,8 @@
 
 基于 HTML、CSS 和原生 JavaScript 的非官方学习项目，参考明日方舟游戏官网制作，保留课程设计原始版本，并分阶段改进布局、交互、资源体积和部署方式。
 
+<img width="1268" height="616" alt="image" src="https://github.com/user-attachments/assets/249c5ddc-e910-4048-948c-6d5d60a5b239" />
+
 ## 已完成
 
 - 首页背景视频、情报列表、四位干员切换、世界设定、媒体和更多内容页面。
