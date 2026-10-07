@@ -1,0 +1,12 @@
+const path = require('node:path');
+const fs = require('node:fs');
+const {spawnSync} = require('node:child_process');
+const ffmpeg = require('ffmpeg-static');
+const root = path.resolve(__dirname, '..');
+const input = path.resolve(process.argv[2] || path.join(root, 'artifacts/stage2/video-original.mp4'));
+const output = path.join(root, 'demo2/video/hero-background.mp4');
+if (!fs.existsSync(input)) throw new Error('Pass the original video path: npm run compress:video -- <input.mp4>');
+if (input === output) throw new Error('The input and output must be different files');
+const result = spawnSync(ffmpeg, ['-hide_banner', '-y', '-i', input, '-c:v','libx264','-preset','slow','-crf','25','-pix_fmt','yuv420p','-movflags','+faststart','-an',output], {stdio:'inherit'});
+if (result.status !== 0) process.exit(result.status || 1);
+console.log(`Compressed video: ${(fs.statSync(output).size / 1024 / 1024).toFixed(2)} MiB`);

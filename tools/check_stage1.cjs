@@ -1,6 +1,9 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
 const assert = require('assert');
+const base = (process.env.TEST_BASE_URL || 'http://127.0.0.1:4173').replace(/\/$/, '');
+const prefix = (process.env.TEST_SOURCE_PREFIX || '/demo2').replace(/\/$/, '');
+const pageUrl = file => `${base}${prefix}/${file}`;
 (async () => {
   const browser = await chromium.launch({headless:true,channel:process.env.BROWSER_CHANNEL || 'msedge'});
   const context = await browser.newContext({reducedMotion:'reduce'});
@@ -14,7 +17,7 @@ const assert = require('assert');
   for(const width of [320,390,768,1440]) {
     await page.setViewportSize({width,height:900});
     for(const file of pages) {
-      await page.goto(`http://127.0.0.1:4173/demo2/${file}`);
+      await page.goto(pageUrl(file));
       await page.waitForLoadState('networkidle');
       // Decode lazy images explicitly, including decorative images hidden by a breakpoint.
       // An intentionally deferred image is not a missing resource.
@@ -32,7 +35,7 @@ const assert = require('assert');
     }
   }
   await page.setViewportSize({width:390,height:844});
-  await page.goto('http://127.0.0.1:4173/demo2/main.html');
+  await page.goto(pageUrl('main.html'));
   assert.equal(await page.locator('video').getAttribute('src'),null,'mobile must not download video');
   assert.equal(await page.locator('.video-controls').count(),0,'no footer video controls');
   await page.getByRole('button',{name:'开启背景声音'}).click();
@@ -47,10 +50,10 @@ const assert = require('assert');
   assert.equal(await page.locator('.operator-shadow').getAttribute('src'),await page.locator('#main-image').getAttribute('src'));
   await page.getByRole('button',{name:'查看阿米娅'}).press('ArrowRight');
   assert.equal(await page.locator('#character-name').innerText(),'陈');
-  await page.goto('http://127.0.0.1:4173/demo2/world.html');
+  await page.goto(pageUrl('world.html'));
   await page.getByRole('button',{name:'感染者 INFECTED'}).click();
   assert((await page.locator('.text').innerText()).startsWith('被源石所感染'));
-  await page.goto('http://127.0.0.1:4173/demo2/info.html');
+  await page.goto(pageUrl('info.html'));
   await page.getByRole('tab',{name:'公告',exact:true}).click();
   assert.equal(await page.locator('#panel-1').isVisible(),true);
   await page.getByRole('tab',{name:'公告',exact:true}).press('End');
@@ -59,7 +62,7 @@ const assert = require('assert');
   assert.equal(await page.locator('#slide-status').innerText(),'1 / 4');
   await page.getByRole('button',{name:'上一张海报'}).click();
   assert.equal(await page.locator('#slide-status').innerText(),'4 / 4');
-  await page.goto('http://127.0.0.1:4173/demo2/login.html');
+  await page.goto(pageUrl('login.html'));
   await page.getByRole('button',{name:'验证演示表单'}).click();
   assert((await page.locator('#login-feedback').innerText()).includes('演示账号'));
   await page.locator('#username').fill('demo');
