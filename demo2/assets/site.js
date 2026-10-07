@@ -93,6 +93,10 @@ choices.forEach((button, index) => {
     document.querySelector('#main-image').alt = `${data.name}立绘`;
     document.querySelector('#character-name').textContent = data.name;
     document.querySelector('#character-description').textContent = data.description.trim();
+    document.querySelector('.operator-shadow').src = data.image;
+    document.querySelector('#character-en').textContent = data.en;
+    document.querySelector('.operator-wordmark').textContent = data.en;
+    setPortraitPosition(data.name);
     choices.forEach(choice => choice.setAttribute('aria-pressed', String(choice === button)));
   });
   button.addEventListener('keydown', event => {
@@ -102,6 +106,10 @@ choices.forEach((button, index) => {
     choices[next].focus(); choices[next].click();
   });
 });
+function setPortraitPosition(name) {
+  const positions = { '凯尔希': '50.7%', '阿米娅': '54.1%', '陈': '41.8%', '德克萨斯': '53%' };
+  document.querySelector('.page-oper .container')?.style.setProperty('--art-x', positions[name]);
+}
 document.querySelectorAll('.menu-item').forEach(button => {
   button.addEventListener('click', () => {
     document.querySelector('.page-world .text').textContent = button.dataset.text;
@@ -132,28 +140,27 @@ if (form) {
 
 const video = document.querySelector('.hero-video');
 if (video) {
-  const toggle = document.querySelector('#video-toggle');
   const sound = document.querySelector('#sound-toggle');
   video.muted = true;
-  function reflectVideo() {
-    toggle.textContent = video.paused ? '播放背景视频' : '暂停背景视频';
-    toggle.setAttribute('aria-pressed', String(!video.paused));
-    sound.disabled = video.paused;
+  function reflectSound() {
+    const enabled = !video.muted && !video.paused;
+    sound.setAttribute('aria-pressed', String(enabled));
+    sound.setAttribute('aria-label', enabled ? '关闭背景声音' : '开启背景声音');
+    sound.title = enabled ? '关闭背景声音' : '开启背景声音';
   }
   async function play() {
     if (!video.getAttribute('src')) video.src = video.dataset.src;
     try { await video.play(); } catch { notify('视频未能播放，可以继续浏览静态封面'); }
-    reflectVideo();
+    reflectSound();
   }
-  toggle.addEventListener('click', () => { if (video.paused) play(); else video.pause(); });
-  sound.addEventListener('click', () => {
-    video.muted = !video.muted;
-    sound.textContent = video.muted ? '开启声音' : '关闭声音';
-    sound.setAttribute('aria-pressed', String(!video.muted));
+  sound.addEventListener('click', async () => {
+    if (video.paused) { video.muted = false; await play(); }
+    else video.muted = !video.muted;
+    reflectSound();
   });
-  video.addEventListener('play', reflectVideo);
-  video.addEventListener('pause', reflectVideo);
-  video.addEventListener('error', () => { reflectVideo(); notify('视频加载失败，静态封面仍可浏览'); });
+  video.addEventListener('play', reflectSound);
+  video.addEventListener('pause', reflectSound);
+  video.addEventListener('error', () => { reflectSound(); notify('视频加载失败，静态封面仍可浏览'); });
   document.addEventListener('visibilitychange', () => { if (document.hidden) video.pause(); });
   // Small screens, data-saving connections and reduced motion use the poster only.
   if (matchMedia('(min-width: 1000px)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches && !navigator.connection?.saveData) play();

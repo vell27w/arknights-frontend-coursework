@@ -10,6 +10,7 @@
   <link href="assets/site.css" rel="stylesheet"/>
   <script defer="True" src="assets/site.js">
   </script>
+  <link href="assets/showcase.css" rel="stylesheet"/>
  </head>
  <body class="page-main page-feature">
   <a class="skip-link" href="#main-content">
@@ -73,16 +74,19 @@
     </a>
    </nav>
    <div class="navbar-right">
-    <button class="share-button" type="button">
-     分享
+    <button aria-label="分享页面" class="share-button" title="分享页面" type="button">
+     <img alt="" src="picture/分享.svg"/>
     </button>
-    <a class="login-link" href="login.html">
-     演示登录
+    <button aria-label="开启背景声音" aria-pressed="false" class="sound-button" id="sound-toggle" title="开启背景声音" type="button">
+     <img alt="" src="picture/音波音乐声音.svg"/>
+    </button>
+    <a aria-label="演示登录" class="login-link" href="login.html" title="演示登录">
+     <img alt="" src="picture/用户.svg"/>
     </a>
    </div>
   </header>
   <main id="main-content" tabindex="-1">
-   <h1 class="hero-heading">
+   <h1 class="sr-only">
     明日方舟
    </h1>
    <video aria-label="明日方舟宣传背景视频" class="hero-video" data-src="video/PV04_landscape.mp4" loop="" muted="" playsinline="" poster="picture/hero-poster.webp" preload="none">
@@ -144,21 +148,13 @@
       官方社区
      </span>
     </a>
-    <div class="qrcode-link" href="#" target="_blank">
+    <div class="qrcode-link">
      <img alt="首页展示图片" decoding="async" height="400" src="picture/qrcode_download.90ed578c.png" width="400"/>
      <img alt="首页展示图片" decoding="async" height="256" src="picture/age_rating.61c75d20.png" width="200"/>
     </div>
    </div>
    <div class="rhodes">
     <img alt="首页展示图片" decoding="async" height="510" src="picture/Logo_罗德岛.png" width="510"/>
-   </div>
-   <div class="video-controls">
-    <button aria-pressed="false" id="video-toggle" type="button">
-     播放背景视频
-    </button>
-    <button aria-pressed="false" disabled="" id="sound-toggle" type="button">
-     开启声音
-    </button>
    </div>
   </main>
   <footer class="site-footer">

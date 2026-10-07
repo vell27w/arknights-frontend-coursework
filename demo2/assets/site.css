@@ -186,6 +186,28 @@ p {
   min-width:0
 }
 
+.sr-only {
+  position:absolute;
+  width:1px;
+  height:1px;
+  margin:-1px;
+  padding:0;
+  clip-path:inset(50%);
+  overflow:hidden;
+  white-space:nowrap;
+}
+.navbar-right .share-button,.navbar-right .sound-button,.navbar-right .login-link {
+  width:28px;
+  height:32px;
+  padding:2px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:0;
+  background:transparent;
+}
+.navbar-right img { width:23px; height:23px; object-fit:contain; opacity:.8; }
+.sound-button[aria-pressed=true] img { filter:brightness(0) saturate(100%) invert(71%) sepia(96%) saturate(2050%) hue-rotate(145deg); opacity:1; }
 /* Home: poster remains visible until video playback succeeds. */
 .page-main {
   background:#10161c url('../picture/hero-poster.webp') center/cover fixed

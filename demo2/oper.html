@@ -10,6 +10,7 @@
   <link href="assets/site.css" rel="stylesheet"/>
   <script defer="True" src="assets/site.js">
   </script>
+  <link href="assets/showcase.css" rel="stylesheet"/>
  </head>
  <body class="page-oper page-feature">
   <a class="skip-link" href="#main-content">
@@ -73,18 +74,32 @@
     </a>
    </nav>
    <div class="navbar-right">
-    <button class="share-button" type="button">
-     分享
+    <button aria-label="分享页面" class="share-button" title="分享页面" type="button">
+     <img alt="" src="picture/分享.svg"/>
     </button>
-    <a class="login-link" href="login.html">
-     演示登录
+    <a aria-label="演示登录" class="login-link" href="login.html" title="演示登录">
+     <img alt="" src="picture/用户.svg"/>
     </a>
    </div>
   </header>
   <main id="main-content" tabindex="-1">
    <div class="container">
+    <img alt="" aria-hidden="true" class="operator-shadow" src="picture/operator/立绘_凯尔希_1.webp"/>
+    <span aria-hidden="true" class="operator-wordmark">
+     KAL’TSIT
+    </span>
     <div class="box-left">
      <div class="profile">
+      <div class="profile-label">
+       RHODES ISLAND ://
+       <br/>
+       <strong>
+        PROFILE
+       </strong>
+      </div>
+      <p id="character-en">
+       KAL’TSIT
+      </p>
       <div class="info">
        <h1 aria-live="polite" id="character-name">
         凯尔希
@@ -100,18 +115,30 @@
       <button aria-label="查看凯尔希" aria-pressed="true" class="operator-choice selected" type="button">
        <img alt="凯尔希" class="thumbnail" data-description="罗德岛最高管理者之一，阿米娅的直接辅导者。
                 罗德岛医疗部门的总负责人。
-                作为罗德岛的老成员，凯尔希医生是在阿米娅背后最稳固的援护者。" data-image="picture/operator/立绘_凯尔希_1.webp" data-name="凯尔希" decoding="async" height="360" src="picture/operator/kaltsit.05c0f5e1.png" width="180"/>
+                作为罗德岛的老成员，凯尔希医生是在阿米娅背后最稳固的援护者。" data-en="KAL’TSIT" data-image="picture/operator/立绘_凯尔希_1.webp" data-name="凯尔希" decoding="async" height="360" src="picture/operator/kaltsit.05c0f5e1.png" width="180"/>
+       <span class="operator-caption">
+        凯尔希
+       </span>
       </button>
       <button aria-label="查看阿米娅" aria-pressed="false" class="operator-choice" type="button">
-       <img alt="阿米娅" class="thumbnail" data-description="罗德岛的公开领袖，在内部拥有最高执行权。虽然，从外表上看起来仅仅是个不成熟的少女，实际上，她却是深受大家信任的合格的领袖。现在，阿米娅正带领着罗德岛，为了感染者的未来，为了让这片大地挣脱矿石病的阴霾而不懈努力。" data-image="picture/operator/立绘_阿米娅_1.webp" data-name="阿米娅" decoding="async" height="360" src="picture/operator/amiya.a410de75.png" width="180"/>
+       <img alt="阿米娅" class="thumbnail" data-description="罗德岛的公开领袖，在内部拥有最高执行权。虽然，从外表上看起来仅仅是个不成熟的少女，实际上，她却是深受大家信任的合格的领袖。现在，阿米娅正带领着罗德岛，为了感染者的未来，为了让这片大地挣脱矿石病的阴霾而不懈努力。" data-en="AMIYA" data-image="picture/operator/立绘_阿米娅_1.webp" data-name="阿米娅" decoding="async" height="360" src="picture/operator/amiya.a410de75.png" width="180"/>
+       <span class="operator-caption">
+        阿米娅
+       </span>
       </button>
       <button aria-label="查看陈" aria-pressed="false" class="operator-choice" type="button">
        <img alt="陈" class="thumbnail" data-description="陈，龙门高级警司，龙门近卫局特别督查组组长，毕业于维多利亚皇家近卫学校，成绩优异，表现突出。在龙门近卫局供职期间，力主取缔龙门境内非法活动，对抗暴力犯罪和有组织犯罪，追缉武装逃犯与国际重犯等行动，并取得多项重大成果。
-                现作为特别人员协助罗德岛行动，并为现场提供战术指挥支援。" data-image="picture/operator/立绘_陈_1.webp" data-name="陈" decoding="async" height="360" src="picture/operator/chen.4d5cd8a0.png" width="180"/>
+                现作为特别人员协助罗德岛行动，并为现场提供战术指挥支援。" data-en="CH’EN" data-image="picture/operator/立绘_陈_1.webp" data-name="陈" decoding="async" height="360" src="picture/operator/chen.4d5cd8a0.png" width="180"/>
+       <span class="operator-caption">
+        陈
+       </span>
       </button>
       <button aria-label="查看德克萨斯" aria-pressed="false" class="operator-choice" type="button">
        <img alt="德克萨斯" class="thumbnail" data-description="企鹅物流员工，单兵作战能力出类拔萃。
-                于合约期内任企鹅物流驻罗德岛联络人员，同时为罗德岛的多项行动提供协助。" data-image="picture/operator/立绘_德克萨斯_1.webp" data-name="德克萨斯" decoding="async" height="360" src="picture/operator/texas.5a198d4c.png" width="180"/>
+                于合约期内任企鹅物流驻罗德岛联络人员，同时为罗德岛的多项行动提供协助。" data-en="TEXAS" data-image="picture/operator/立绘_德克萨斯_1.webp" data-name="德克萨斯" decoding="async" height="360" src="picture/operator/texas.5a198d4c.png" width="180"/>
+       <span class="operator-caption">
+        德克萨斯
+       </span>
       </button>
      </div>
     </div>

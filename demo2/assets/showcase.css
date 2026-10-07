@@ -1,0 +1,156 @@
+/* Full-screen composition for the three showcase pages. */
+.page-main,.page-oper,.page-more { background-color:#050708; }
+.page-main .navbar,.page-oper .navbar,.page-more .navbar {
+  position:absolute; inset:0 0 auto; height:90px; background:linear-gradient(#000e,#0008,transparent);
+  border-bottom:0; padding:20px 3%;
+}
+.page-main .site-footer,.page-oper .site-footer,.page-more .site-footer {
+  padding:10px 3%; font-size:10px; background:#050708; border-top:0;
+}
+.page-main .navbar-center,.page-oper .navbar-center,.page-more .navbar-center {
+  width:65%; max-width:1220px; justify-content:space-between; gap:20px;
+}
+.page-main .nav-item,.page-oper .nav-item,.page-more .nav-item { border-bottom:0; }
+.page-main .nav-item .en,.page-oper .nav-item .en,.page-more .nav-item .en {
+  font-family:Impact,"Arial Narrow",Arial,sans-serif; font-size:18px; font-weight:400; letter-spacing:0;
+}
+.page-main main { min-height:calc(100svh - 34px); display:block; padding:0; overflow:hidden; }
+.page-main main:before { background:linear-gradient(90deg,#0004,transparent 50%,#0002); }
+.page-main .box-left {
+  display:block; position:absolute; left:-9%; top:90px; width:47%; height:100%;
+  background:url('../picture/mask_block.33e7b5a1.png') left top/cover no-repeat;
+  opacity:.55; pointer-events:none; z-index:-1;
+}
+.page-main .links-container {
+  position:absolute; right:1.6%; top:50%; transform:translateY(-42%);
+  display:flex; flex-direction:column; gap:8px; width:clamp(118px,9vw,158px);
+}
+.page-main .link { min-height:0; height:40px; padding:5px 8px; gap:8px; border:0; border-radius:3px; font-size:10px; background:#101316ee; }
+.page-main .link img { width:23px; height:23px; }
+.page-main .android { background:#8dc21f; color:#fff; }
+.page-main .mumu { background:#3187fb; color:#fff; }
+.page-main .link:hover { filter:brightness(1.15); color:#fff; }
+.page-main .qrcode-link { background:transparent; padding:12px 0 0; gap:10px; border-top:1px solid #ffffff40; margin-top:4px; }
+.page-main .qrcode-link img { width:45px; height:45px; object-fit:contain; }
+.page-main .box-bottom {
+  position:absolute; left:0; bottom:66px; width:100%; display:flex; align-items:center;
+  gap:24px; padding:12px 3%; border-top:1px solid #ffffff40; background:#0001;
+}
+.page-main .box-bottom-left { font-size:clamp(36px,4.6vw,74px); line-height:1; }
+.page-main .box-bottom-right { font-size:11px; font-weight:700; line-height:1.5; letter-spacing:0; }
+.page-main .box-bottom-bottom { position:absolute; bottom:34px; left:3%; color:#eee; }
+
+/* The original artwork includes transparent padding. Positioning is per character,
+   so the face stays in frame while the lower body is clipped by the viewport. */
+.page-oper main { position:relative; overflow:hidden; min-height:calc(100svh - 34px); }
+.page-oper .container {
+  --art-size:1450px; --art-x:50.7%; --art-top:100px;
+  position:relative; overflow:hidden; width:100%; max-width:none; margin:0; padding:0;
+  height:max(720px,calc(100svh - 34px)); display:block; isolation:isolate;
+  background:linear-gradient(120deg,#03070a66,#0009),repeating-linear-gradient(45deg,transparent 0 145px,#ffffff08 146px 147px,transparent 148px 292px);
+}
+.operator-shadow {
+  position:absolute; width:var(--art-size); height:var(--art-size); max-width:none;
+  top:calc(var(--art-top) - 210px); left:45%; transform:translateX(calc(-1 * var(--art-x))) scale(1.45);
+  transform-origin:50% 0;
+  filter:grayscale(1) brightness(.52); opacity:.28; z-index:-2; pointer-events:none;
+  mask-image:linear-gradient(#000 40%,transparent 85%);
+}
+.operator-wordmark {
+  position:absolute; left:4%; bottom:10%; font:900 clamp(110px,21vw,360px)/1 Arial,sans-serif;
+  white-space:nowrap; color:#ffffff0d; z-index:-1; pointer-events:none;
+}
+.page-oper .box-left { position:absolute; left:6.5%; top:19%; width:34%; max-width:530px; z-index:2; }
+.profile-label { font-size:11px; line-height:1.6; margin-bottom:clamp(35px,8vh,100px); }
+.profile-label strong { font-size:21px; letter-spacing:-.03em; }
+#character-en { font-size:14px; font-weight:800; margin:0; line-height:1; }
+.page-oper .profile h1 { font-size:clamp(35px,3.3vw,54px); margin:0 0 22px; line-height:1.15; }
+.page-oper .profile h1:after { display:none; }
+.page-oper #character-description { background:#000e; border:0; padding:16px 24px; min-height:0; font-size:13px; line-height:1.6; color:#b8b8b8; }
+.page-oper .thumbnails { grid-template-columns:repeat(4,1fr); gap:12px; margin-top:22px; }
+.page-oper .operator-choice { position:relative; aspect-ratio: .62; border:4px solid #d9d9d9; background:#080c10; overflow:visible; }
+.page-oper .operator-choice img { object-fit:cover; }
+.page-oper .operator-choice[aria-pressed=true] { border-color:#fff; box-shadow:none; }
+.page-oper .operator-choice[aria-pressed=true]:after { content:""; position:absolute; top:-9px; right:-9px; width:22px; height:22px; border-top:6px solid #16c4e8; border-right:6px solid #16c4e8; }
+.operator-caption { position:absolute; left:0; right:0; bottom:0; padding:6px 2px; font-size:11px; text-align:left; background:linear-gradient(transparent,#000b); color:#fff; }
+.page-oper .image-display { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
+.page-oper .image-display img {
+  position:absolute; width:var(--art-size); height:var(--art-size); max-width:none;
+  left:69%; top:var(--art-top); transform:translateX(calc(-1 * var(--art-x)));
+  object-fit:contain; filter:drop-shadow(16px 10px 20px #000b);
+}
+.page-oper .bottom { position:absolute; bottom:0; left:0; right:0; height:105px; padding:0; background:linear-gradient(transparent,#000d); border-top:1px solid #ffffff20; pointer-events:none; }
+.page-oper .bottom .font { opacity:0; }
+
+/* Four seamless posters instead of a card grid. */
+.page-more main { position:relative; overflow:hidden; }
+.page-more .container { width:100%; max-width:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:0; height:max(680px,calc(100svh - 34px)); }
+.page-more .box { height:100%; border:0; position:relative; overflow:hidden; }
+.page-more .box .more-panel { position:absolute; inset:0; width:100%; height:100%; }
+.page-more .box img { height:100%; object-fit:cover; filter:brightness(.76); }
+.page-more .box:after { content:""; position:absolute; inset:0; background:linear-gradient(#000b,transparent 36%,#0001 52%,#000e 94%); pointer-events:none; }
+.page-more .box1 { background:#12232c; }
+.page-more .box2 { background:#292522; }
+.page-more .box3 { background:#0a202e; }
+.page-more .box4 { background:#27311a; }
+.page-more .more-copy { position:absolute; bottom:20%; left:10%; right:5%; z-index:2; pointer-events:none; }
+.page-more .title { position:static; font-size:clamp(24px,2.45vw,43px); line-height:1.25; margin-bottom:22px; white-space:nowrap; letter-spacing:-.04em; }
+.more-symbol { display:inline-block; margin-right:10px; font-size:1.1em; }
+.more-subtitle { display:block; font-size:clamp(9px,.75vw,13px); font-weight:700; white-space:nowrap; }
+.more-action { display:block; font-size:10px; margin-top:6px; }
+.more-rule { display:block; width:80px; height:1px; margin-top:20px; background:#d9dedb; }
+.page-more .bottom { position:absolute; bottom:0; left:0; right:0; height:115px; padding:0 6%; background:#0004; border-top:1px solid #ffffff40; pointer-events:none; }
+.page-more .font { font-size:clamp(40px,5.5vw,88px); color:#ffffff20; line-height:1; }
+
+@media(min-width:1800px) {
+  .page-oper .container { --art-size:1800px; --art-top:50px; }
+  .page-oper #character-description { font-size:15px; }
+}
+@media(max-width:1050px) and (min-width:701px) {
+  .page-main .navbar,.page-oper .navbar,.page-more .navbar { height:125px; }
+  .page-main .navbar-center,.page-oper .navbar-center,.page-more .navbar-center { width:100%; max-width:none; }
+  .page-oper .box-left { top:23%; width:40%; left:5%; }
+  .page-oper .container { --art-size:1350px; --art-top:30px; }
+  .page-oper .image-display img { left:78%; }
+  .page-more .more-copy { left:8%; right:4%; }
+  .page-more .title { font-size:22px; white-space:normal; }
+  .more-symbol { display:block; margin-bottom:10px; }
+  .more-subtitle { white-space:normal; }
+}
+@media(max-width:700px) {
+  .page-main .navbar,.page-oper .navbar,.page-more .navbar { height:auto; min-height:76px; position:relative; padding:16px; background:#050708; }
+  .page-main .navbar-center,.page-oper .navbar-center,.page-more .navbar-center { width:100%; gap:10px; }
+  .page-main .nav-item .en,.page-oper .nav-item .en,.page-more .nav-item .en { font-size:14px; }
+  .page-main main { min-height:690px; }
+  .page-main .box-left { top:0; width:70%; opacity:.35; }
+  .page-main .links-container { right:12px; top:45%; width:116px; gap:7px; }
+  .page-main .link { height:36px; font-size:9px; gap:7px; }
+  .page-main .link img { width:20px; height:20px; }
+  .page-main .qrcode-link img { width:38px; height:38px; }
+  .page-main .box-bottom { bottom:44px; padding:14px 16px; gap:12px; flex-wrap:wrap; }
+  .page-main .box-bottom-left { font-size:36px; }
+  .page-main .box-bottom-right { font-size:9px; }
+  .page-main .box-bottom-bottom { bottom:20px; left:16px; }
+  .page-oper main { min-height:0; }
+  .page-oper .container { --art-size:1100px; --art-top:-18px; height:auto; min-height:900px; padding:460px 20px 60px; }
+  .page-oper .image-display { height:450px; mask-image:linear-gradient(#000 75%,transparent); }
+  .page-oper .image-display img { left:60%; }
+  .operator-shadow { left:20%; top:-160px; opacity:.22; }
+  .operator-wordmark { top:300px; bottom:auto; font-size:120px; }
+  .page-oper .box-left { position:relative; left:auto; top:auto; width:100%; max-width:none; }
+  .profile-label { display:none; }
+  .page-oper .profile h1 { font-size:38px; margin:8px 0 20px; }
+  .page-oper #character-description { padding:16px; font-size:13px; }
+  .page-oper .thumbnails { gap:10px; }
+  .page-oper .operator-choice { border-width:3px; }
+  .page-oper .bottom { height:45px; }
+  .page-more .container { height:auto; min-height:0; grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .page-more .box { height:420px; }
+  .page-more .more-copy { bottom:12%; left:12px; right:10px; }
+  .page-more .title { font-size:22px; white-space:normal; margin-bottom:16px; }
+  .more-symbol { display:block; font-size:28px; margin-bottom:8px; }
+  .more-subtitle { font-size:9px; white-space:normal; line-height:1.5; }
+  .more-rule { width:50px; margin-top:14px; }
+  .page-more .bottom { position:relative; height:65px; padding:12px 16px; }
+  .page-more .font { font-size:clamp(18px,5.2vw,24px); white-space:nowrap; }
+}
