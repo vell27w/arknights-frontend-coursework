@@ -1161,6 +1161,23 @@ body:not(.page-main) main>.bottom .font {
   font-weight:800; letter-spacing:.04em; opacity:1; white-space:nowrap;
 }
 /* Adjust these two values to tune poster hover. */
+/* Keep both bottom bars visible on desktop, including short browser panels.
+   Long content scrolls inside its own region rather than pushing the footer away. */
+@media(min-width:701px) {
+  body.page-world,body.page-media { height:100svh; min-height:0; }
+  body.page-world>main,body.page-media>main {
+    display:flex; flex-direction:column; flex:1; min-height:0; padding-bottom:0;
+  }
+  .page-world main>.container,.page-media main>.container {
+    flex:1; min-height:0; overflow:auto; padding:clamp(16px,3vh,32px) 5%; align-items:safe center;
+  }
+  body.page-world main>.bottom,body.page-media main>.bottom {
+    position:relative; inset:auto; flex:0 0 115px;
+  }
+  .page-world .site-footer,.page-media .site-footer { flex-shrink:0; }
+}
+.page-world .container,.page-media .container { scrollbar-color:#52616b transparent; }
+/* Poster hover controls. */
 .page-more {
   --poster-hover-scale:1.08;
   --poster-hover-duration:0.65s;
