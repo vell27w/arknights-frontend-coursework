@@ -65,8 +65,6 @@
   left:69%; top:var(--art-top); transform:translateX(calc(-1 * var(--art-x)));
   object-fit:contain; filter:drop-shadow(16px 10px 20px #000b);
 }
-.page-oper .bottom { position:absolute; bottom:0; left:0; right:0; height:105px; padding:0; background:linear-gradient(transparent,#000d); border-top:1px solid #ffffff20; pointer-events:none; }
-.page-oper .bottom .font { opacity:0; }
 
 /* Four seamless posters instead of a card grid. */
 .page-more main { position:relative; overflow:hidden; }
@@ -85,8 +83,6 @@
 .more-subtitle { display:block; font-size:clamp(9px,.75vw,13px); font-weight:700; white-space:nowrap; }
 .more-action { display:block; font-size:10px; margin-top:6px; }
 .more-rule { display:block; width:80px; height:1px; margin-top:20px; background:#d9dedb; }
-.page-more .bottom { position:absolute; bottom:0; left:0; right:0; height:115px; padding:0 6%; background:#0004; border-top:1px solid #ffffff40; pointer-events:none; }
-.page-more .font { font-size:clamp(40px,5.5vw,88px); color:#ffffff20; line-height:1; }
 
 @media(min-width:1800px) {
   .page-oper .container { --art-size:1800px; --art-top:50px; }
@@ -124,7 +120,6 @@
   .page-oper #character-description { padding:16px; font-size:13px; }
   .page-oper .thumbnails { gap:10px; }
   .page-oper .operator-choice { border-width:3px; }
-  .page-oper .bottom { height:45px; }
   .page-more .container { height:auto; min-height:0; grid-template-columns:repeat(2,minmax(0,1fr)); }
   .page-more .box { height:420px; }
   .page-more .more-copy { bottom:12%; left:12px; right:10px; }
@@ -132,6 +127,4 @@
   .more-symbol { display:block; font-size:28px; margin-bottom:8px; }
   .more-subtitle { font-size:9px; white-space:normal; line-height:1.5; }
   .more-rule { width:50px; margin-top:14px; }
-  .page-more .bottom { position:relative; height:65px; padding:12px 16px; }
-  .page-more .font { font-size:clamp(18px,5.2vw,24px); white-space:nowrap; }
 }
