@@ -36,7 +36,7 @@ const pageUrl = file => `${base}${prefix}/${file}`;
   }
   await page.setViewportSize({width:390,height:844});
   await page.goto(pageUrl('main.html'));
-  assert.equal(await page.locator('video').getAttribute('src'),null,'mobile must not download video');
+  assert.equal(await page.locator('video').getAttribute('src'),null,'reduced motion must not download video');
   assert.equal(await page.locator('.video-controls').count(),0,'no footer video controls');
   await page.getByRole('button',{name:'开启背景声音'}).click();
   await page.waitForFunction(() => !document.querySelector('video').paused);

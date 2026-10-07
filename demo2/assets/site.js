@@ -162,6 +162,6 @@ if (video) {
   video.addEventListener('pause', reflectSound);
   video.addEventListener('error', () => { reflectSound(); notify('视频加载失败，静态封面仍可浏览'); });
   document.addEventListener('visibilitychange', () => { if (document.hidden) video.pause(); });
-  // Small screens, data-saving connections and reduced motion use the poster only.
-  if (matchMedia('(min-width: 1000px)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches && !navigator.connection?.saveData) play();
+  // Muted inline playback also works on phones; respect explicit motion/data preferences.
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches && !navigator.connection?.saveData) play();
 }
