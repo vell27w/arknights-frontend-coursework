@@ -1,98 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="mainCss.css">
-</head>
-<body>
-    <video src="video/PV04_landscape.mp4" autoplay="autoplay" loop="loop" muted="muted"></video>
-
-    <div class="navbar">
-        <div class="navbar-left">
-            <div class="logoBox">
-                <img class="logo" src="picture/Logo_明日方舟.svg"></img>
-            </div>
-        </div>
-        <div class="navbar-center-right">
-            <div class="navbar-center">
-                <a href="main.html" class="nav-item">
-                    <div class="en">INDEX</div>
-                    <div class="cn">首页</div>
-                </a>
-                <a href="info.html" class="nav-item">
-                    <div class="en">INFORMATION</div>
-                    <div class="cn">情报</div>
-                </a>
-                <a href="oper.html" class="nav-item">
-                    <div class="en">OPERATOR</div>
-                    <div class="cn">干员</div>
-                </a>
-                <a href="world.html" class="nav-item">
-                    <div class="en">WORLD</div>
-                    <div class="cn">设定</div>
-                </a>
-                <a href="media.html" class="nav-item">
-                    <div class="en">MEDIA</div>
-                    <div class="cn">泰拉万象</div>
-                </a><a href="more.html" class="nav-item">
-                    <div class="en">MORE</div>
-                    <div class="cn">更多内容</div>
-                </a>
-            </div>
-            <div class="navbar-right">
-                <img class="icon" src="picture/分享.svg" alt="Icon 1">
-                <img class="icon" src="picture/音波音乐声音.svg" alt="Icon 2">
-                <img class="icon" src="picture/用户.svg" alt="Icon 3">
-            </div>
-        </div>
+<html lang="zh-CN">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   首页 · 明日方舟主题课设
+  </title>
+  <meta content="明日方舟游戏官网仿作，原生前端课程设计。非官方网站，内容为课程设计历史展示。" name="description"/>
+  <link href="assets/site.css" rel="stylesheet"/>
+  <script defer="True" src="assets/site.js">
+  </script>
+ </head>
+ <body class="page-main page-feature">
+  <a class="skip-link" href="#main-content">
+   跳到主要内容
+  </a>
+  <header class="navbar">
+   <a aria-label="返回首页" class="brand" href="main.html">
+    <img alt="明日方舟" decoding="async" src="picture/Logo_明日方舟.svg"/>
+   </a>
+   <button aria-controls="site-nav" aria-expanded="false" class="menu-toggle" type="button">
+    菜单
+   </button>
+   <nav aria-label="主导航" class="navbar-center" id="site-nav">
+    <a aria-current="page" class="nav-item" href="main.html">
+     <span class="en">
+      INDEX
+     </span>
+     <span class="cn">
+      首页
+     </span>
+    </a>
+    <a class="nav-item" href="info.html">
+     <span class="en">
+      INFORMATION
+     </span>
+     <span class="cn">
+      情报
+     </span>
+    </a>
+    <a class="nav-item" href="oper.html">
+     <span class="en">
+      OPERATOR
+     </span>
+     <span class="cn">
+      干员
+     </span>
+    </a>
+    <a class="nav-item" href="world.html">
+     <span class="en">
+      WORLD
+     </span>
+     <span class="cn">
+      设定
+     </span>
+    </a>
+    <a class="nav-item" href="media.html">
+     <span class="en">
+      MEDIA
+     </span>
+     <span class="cn">
+      泰拉万象
+     </span>
+    </a>
+    <a class="nav-item" href="more.html">
+     <span class="en">
+      MORE
+     </span>
+     <span class="cn">
+      更多内容
+     </span>
+    </a>
+   </nav>
+   <div class="navbar-right">
+    <button class="share-button" type="button">
+     分享
+    </button>
+    <a class="login-link" href="login.html">
+     演示登录
+    </a>
+   </div>
+  </header>
+  <main id="main-content" tabindex="-1">
+   <h1 class="hero-heading">
+    明日方舟
+   </h1>
+   <video aria-label="明日方舟宣传背景视频" class="hero-video" data-src="video/PV04_landscape.mp4" loop="" muted="" playsinline="" poster="picture/hero-poster.webp" preload="none">
+   </video>
+   <div class="box-left">
+   </div>
+   <div class="box-bottom">
+    <div class="box-bottom-left">
+     ARKNIGHTS
     </div>
-
-    <div class="box-left"></div>
-    <div class="box-bottom">
-        <div class="box-bottom-left">ARKNIGHTS</div>
-        <div class="box-bottom-right">
-            <div class="box-bottom-right-1">RHODES ISLAND</div>
-            <div class="box-bottom-right-2">HTTP://AK.HYPERGRYPH.COM/</div>
-        </div>
-        
+    <div class="box-bottom-right">
+     <div class="box-bottom-right-1">
+      RHODES ISLAND
+     </div>
+     <div class="box-bottom-right-2">
+      HTTP://AK.HYPERGRYPH.COM/
+     </div>
     </div>
-    <div class="box-bottom-bottom">© HYPERGRYPH</div>
-
-    <div class="box-logo"></div>
-
-    <div class="links-container">
-        <a href="https://apps.apple.com/cn/app/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F/id1454663939" target="_blank" class="link app-store">
-            <img src="picture/苹果.svg">
-            <span>App Store<br>下载</span>
-        </a>
-        <a href="#" class="link android">
-            <img src="picture/安卓.svg">
-            <span>Android<br>下载</span>
-        </a>
-        <a href="https://www.taptap.cn/" target="_blank" class="link taptap">
-            <img src="picture/taptap.svg">
-            <span>通过TapTap下载</span>
-        </a>
-        <a href="https://mumu.163.com/" target="_blank" class="link mumu">
-            <img src="picture/mumu.png">
-            <span>MuMu模拟器<br>Windows下载</span>
-        </a>
-        <a href="https://www.skland.com/game/arknights" target="_blank" class="link community">
-            <img src="picture/森空岛.jpeg">
-            <span>官方社区</span>
-        </a>
-        <div href="#" target="_blank" class="qrcode-link">
-            <img src="picture/qrcode_download.90ed578c.png">
-            <img src="picture/age_rating.61c75d20.png">
-        </div>
+   </div>
+   <div class="box-bottom-bottom">
+    © HYPERGRYPH
+   </div>
+   <div class="box-logo">
+   </div>
+   <div class="links-container">
+    <a class="link app-store" href="https://apps.apple.com/cn/app/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F/id1454663939" rel="noopener noreferrer" target="_blank">
+     <img alt="首页展示图片" decoding="async" src="picture/苹果.svg"/>
+     <span>
+      App Store
+      <br/>
+      下载
+     </span>
+    </a>
+    <a class="link android" href="https://ak.hypergryph.com/" rel="noopener noreferrer" target="_blank">
+     <img alt="首页展示图片" decoding="async" src="picture/安卓.svg"/>
+     <span>
+      Android
+      <br/>
+      下载
+     </span>
+    </a>
+    <a class="link taptap" href="https://www.taptap.cn/" rel="noopener noreferrer" target="_blank">
+     <img alt="首页展示图片" decoding="async" src="picture/taptap.svg"/>
+     <span>
+      通过TapTap下载
+     </span>
+    </a>
+    <a class="link mumu" href="https://mumu.163.com/" rel="noopener noreferrer" target="_blank">
+     <img alt="首页展示图片" decoding="async" height="150" src="picture/mumu.png" width="150"/>
+     <span>
+      MuMu模拟器
+      <br/>
+      Windows下载
+     </span>
+    </a>
+    <a class="link community" href="https://www.skland.com/game/arknights" rel="noopener noreferrer" target="_blank">
+     <img alt="首页展示图片" decoding="async" height="150" src="picture/森空岛.jpeg" width="150"/>
+     <span>
+      官方社区
+     </span>
+    </a>
+    <div class="qrcode-link" href="#" target="_blank">
+     <img alt="首页展示图片" decoding="async" height="400" src="picture/qrcode_download.90ed578c.png" width="400"/>
+     <img alt="首页展示图片" decoding="async" height="256" src="picture/age_rating.61c75d20.png" width="200"/>
     </div>
-
-    <div class="rhodes">
-        <img src="picture/Logo_罗德岛.png">
-    </div>
-    
-
-</body>
+   </div>
+   <div class="rhodes">
+    <img alt="首页展示图片" decoding="async" height="510" src="picture/Logo_罗德岛.png" width="510"/>
+   </div>
+   <div class="video-controls">
+    <button aria-pressed="false" id="video-toggle" type="button">
+     播放背景视频
+    </button>
+    <button aria-pressed="false" disabled="" id="sound-toggle" type="button">
+     开启声音
+    </button>
+   </div>
+  </main>
+  <footer class="site-footer">
+   <span>
+    非官方课程设计 · 素材版权归原权利人 · 历史内容展示
+   </span>
+   <a href="main.html">
+    返回首页
+   </a>
+  </footer>
+  <p aria-live="polite" class="toast" hidden="" id="site-status" role="status">
+  </p>
+ </body>
 </html>

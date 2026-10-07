@@ -1,0 +1,12 @@
+{
+  "name": "arknights-frontend-coursework",
+  "version": "0.1.0",
+  "private": true,
+  "description": "明日方舟主题前端课程设计",
+  "scripts": {
+    "test": "node tools/check_stage1.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

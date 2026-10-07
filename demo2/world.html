@@ -1,105 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="world.css">
-
-</head>
-<body>
-    <div class="navbar">
-        <div class="navbar-left">
-            <div class="logoBox">
-                <img class="logo" src="picture/Logo_明日方舟.svg"></img>
-            </div>
-        </div>
-        <div class="navbar-center-right">
-            <div class="navbar-center">
-                <a href="main.html" class="nav-item">
-                    <div class="en">INDEX</div>
-                    <div class="cn">首页</div>
-                </a>
-                <a href="info.html" class="nav-item">
-                    <div class="en">INFORMATION</div>
-                    <div class="cn">情报</div>
-                </a>
-                <a href="oper.html" class="nav-item">
-                    <div class="en">OPERATOR</div>
-                    <div class="cn">干员</div>
-                </a>
-                <a href="world.html" class="nav-item">
-                    <div class="en">WORLD</div>
-                    <div class="cn">设定</div>
-                </a>
-                <a href="media.html" class="nav-item">
-                    <div class="en">MEDIA</div>
-                    <div class="cn">泰拉万象</div>
-                </a><a href="more.html" class="nav-item">
-                    <div class="en">MORE</div>
-                    <div class="cn">更多内容</div>
-                </a>
-            </div>
-            <div class="navbar-right">
-                <img class="icon" src="picture/分享.svg" alt="Icon 1">
-                <img class="icon" src="picture/音波音乐声音.svg" alt="Icon 2">
-                <img class="icon" src="picture/用户.svg" alt="Icon 3">
-            </div>
-        </div>
+<html lang="zh-CN">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   世界观 · 明日方舟主题课设
+  </title>
+  <meta content="明日方舟游戏官网仿作，原生前端课程设计。非官方网站，内容为课程设计历史展示。" name="description"/>
+  <link href="assets/site.css" rel="stylesheet"/>
+  <script defer="True" src="assets/site.js">
+  </script>
+ </head>
+ <body class="page-world page-feature">
+  <a class="skip-link" href="#main-content">
+   跳到主要内容
+  </a>
+  <header class="navbar">
+   <a aria-label="返回首页" class="brand" href="main.html">
+    <img alt="明日方舟" decoding="async" loading="lazy" src="picture/Logo_明日方舟.svg"/>
+   </a>
+   <button aria-controls="site-nav" aria-expanded="false" class="menu-toggle" type="button">
+    菜单
+   </button>
+   <nav aria-label="主导航" class="navbar-center" id="site-nav">
+    <a class="nav-item" href="main.html">
+     <span class="en">
+      INDEX
+     </span>
+     <span class="cn">
+      首页
+     </span>
+    </a>
+    <a class="nav-item" href="info.html">
+     <span class="en">
+      INFORMATION
+     </span>
+     <span class="cn">
+      情报
+     </span>
+    </a>
+    <a class="nav-item" href="oper.html">
+     <span class="en">
+      OPERATOR
+     </span>
+     <span class="cn">
+      干员
+     </span>
+    </a>
+    <a aria-current="page" class="nav-item" href="world.html">
+     <span class="en">
+      WORLD
+     </span>
+     <span class="cn">
+      设定
+     </span>
+    </a>
+    <a class="nav-item" href="media.html">
+     <span class="en">
+      MEDIA
+     </span>
+     <span class="cn">
+      泰拉万象
+     </span>
+    </a>
+    <a class="nav-item" href="more.html">
+     <span class="en">
+      MORE
+     </span>
+     <span class="cn">
+      更多内容
+     </span>
+    </a>
+   </nav>
+   <div class="navbar-right">
+    <button class="share-button" type="button">
+     分享
+    </button>
+    <a class="login-link" href="login.html">
+     演示登录
+    </a>
+   </div>
+  </header>
+  <main id="main-content" tabindex="-1">
+   <div class="container">
+    <div class="menu">
+     <button aria-pressed="true" class="menu-item" data-text="大地被起因不明的天灾四处肆虐，经由天灾席卷过的土地上出现了大量的神秘矿物——“源石”。依赖于技术的进步，源石蕴含的能量投入工业后使得文明顺利迈入现代，与此同时，源石本身也催生出“感染者”的存在。" type="button">
+      <span class="chinese">
+       源石
+      </span>
+      <span class="english">
+       ORIGINIUMS
+      </span>
+     </button>
+     <button aria-pressed="false" class="menu-item" data-text="源石被发现之后，人们发掘出一种通过它来施放一系列令物质改变原有性状的技术，这种技术被称为源石技艺，常被俗称为“法术”。源石技艺所运用的能源，一般被认为来自于源石本身。而人是否能施放法术，以及所能施放法术的形式、强度、效果等，通常受到先天具备的素质、后天对源石技艺的学习能力这两方面因素的制约。" type="button">
+      <span class="chinese">
+       源石技艺
+      </span>
+      <span class="english">
+       ORIGINIUM ARTS
+      </span>
+     </button>
+     <button aria-pressed="false" class="menu-item" data-text="无种族立场，极端排外的感染者组织。他们宣称“感染者应对自己的身份感到骄傲，积极去获取并使用属于自己的力量”。试图用最原始的手段去争夺世界的公正。以某座被摧毁的伟大城市为开端，医疗机构“罗德岛”的突然介入，令整个事态向着未知发展。" type="button">
+      <span class="chinese">
+       整合运动
+      </span>
+      <span class="english">
+       REUNION
+      </span>
+     </button>
+     <button aria-pressed="false" class="menu-item" data-text="被源石所感染的人。理论致死率100% ，死亡时存在扩散传染性以及潜在危险能力，是各国隔离驱逐的目标。长久以来，没人告诉他们该如何渡过余生，如今伴随着一位颠覆者的出现，越来越多的感染者被纳入一场名为“整合运动”的反抗浪潮。" type="button">
+      <span class="chinese">
+       感染者
+      </span>
+      <span class="english">
+       INFECTED
+      </span>
+     </button>
+     <button aria-pressed="false" class="menu-item" data-text="建造在可移动设备上的城市。频繁发生且破坏力巨大的天灾，迫使几乎所有的国家，都需要采用定期迁移家园与聚落的方式进行躲避。而移动城市，正是在这种需求下慢慢诞生的。人们在迁徙的过程中，尝试将建筑和种种装置安设在移动设备之上，并不断地扩大载具的规模。在文明与技术的演变之下，人们最终创造出了十分庞大的移动城市" type="button">
+      <span class="chinese">
+       移动城邦
+      </span>
+      <span class="english">
+       NOMADIC CITY
+      </span>
+     </button>
+     <button aria-pressed="false" class="menu-item" data-text="罗德岛制药公司作为感染者问题专家，聘用感染者，深入危险地区，通过种种手段，已经成功解决了数起感染者引发的事件。而今，他们将面对史无前例的感染者暴乱。在各个势力间游走，发掘不为人知的内幕，抵挡感染者的疯狂进攻，你的决策将决定罗德岛的方向。" type="button">
+      <span class="chinese">
+       罗德岛
+      </span>
+      <span class="english">
+       RHODES ISLAND
+      </span>
+     </button>
     </div>
-    <div class="container">
-        <div class="menu">
-            <div class="menu-item" data-text="大地被起因不明的天灾四处肆虐，经由天灾席卷过的土地上出现了大量的神秘矿物——“源石”。依赖于技术的进步，源石蕴含的能量投入工业后使得文明顺利迈入现代，与此同时，源石本身也催生出“感染者”的存在。">
-                <span class="chinese">源石</span>
-                <span class="english">ORIGINIUMS</span>
-            </div>
-            <div class="menu-item" data-text="源石被发现之后，人们发掘出一种通过它来施放一系列令物质改变原有性状的技术，这种技术被称为源石技艺，常被俗称为“法术”。源石技艺所运用的能源，一般被认为来自于源石本身。而人是否能施放法术，以及所能施放法术的形式、强度、效果等，通常受到先天具备的素质、后天对源石技艺的学习能力这两方面因素的制约。">
-                <span class="chinese">源石技艺</span>
-                <span class="english">ORIGINIUM ARTS</span>
-            </div>
-            <div class="menu-item" data-text="无种族立场，极端排外的感染者组织。他们宣称“感染者应对自己的身份感到骄傲，积极去获取并使用属于自己的力量”。试图用最原始的手段去争夺世界的公正。以某座被摧毁的伟大城市为开端，医疗机构“罗德岛”的突然介入，令整个事态向着未知发展。">
-                <span class="chinese">整合运动</span>
-                <span class="english">REUNION</span>
-            </div>
-            <div class="menu-item" data-text="被源石所感染的人。理论致死率100% ，死亡时存在扩散传染性以及潜在危险能力，是各国隔离驱逐的目标。长久以来，没人告诉他们该如何渡过余生，如今伴随着一位颠覆者的出现，越来越多的感染者被纳入一场名为“整合运动”的反抗浪潮。">
-                <span class="chinese">感染者</span>
-                <span class="english">INFECTED</span>
-            </div>
-            <div class="menu-item" data-text="建造在可移动设备上的城市。频繁发生且破坏力巨大的天灾，迫使几乎所有的国家，都需要采用定期迁移家园与聚落的方式进行躲避。而移动城市，正是在这种需求下慢慢诞生的。人们在迁徙的过程中，尝试将建筑和种种装置安设在移动设备之上，并不断地扩大载具的规模。在文明与技术的演变之下，人们最终创造出了十分庞大的移动城市">
-                <span class="chinese">移动城邦</span>
-                <span class="english">NOMADIC CITY</span>
-            </div>
-            <div class="menu-item" data-text="罗德岛制药公司作为感染者问题专家，聘用感染者，深入危险地区，通过种种手段，已经成功解决了数起感染者引发的事件。而今，他们将面对史无前例的感染者暴乱。在各个势力间游走，发掘不为人知的内幕，抵挡感染者的疯狂进攻，你的决策将决定罗德岛的方向。">
-                <span class="chinese">罗德岛</span>
-                <span class="english">RHODES ISLAND</span>
-            </div>
-        </div>
-        <div class="text">
-        </div>
-        <dic class="image">
-            <img src="picture/Logo_罗德岛.png"></img>
-        </dic>
+    <div aria-live="polite" class="text">
+     大地被起因不明的天灾四处肆虐，经由天灾席卷过的土地上出现了大量的神秘矿物——“源石”。依赖于技术的进步，源石蕴含的能量投入工业后使得文明顺利迈入现代，与此同时，源石本身也催生出“感染者”的存在。
     </div>
-
-    <div class="bottom">
-        <div class="font">WORLD</div>
+    <div class="image">
+     <img alt="世界观展示图片" decoding="async" height="510" loading="lazy" src="picture/Logo_罗德岛.png" width="510"/>
     </div>
-</body>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuItems = document.querySelectorAll('.menu-item');
-        const textArea = document.querySelector('.text');
-
-        menuItems.forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                const text = this.getAttribute('data-text');
-                textArea.textContent = text;
-            });
-
-            item.addEventListener('mouseleave', function() {
-                textArea.textContent = ''; // 或者设置为默认文本
-            });
-        });
-    });
-</script>
+   </div>
+   <div class="bottom">
+    <div class="font">
+     WORLD
+    </div>
+   </div>
+  </main>
+  <footer class="site-footer">
+   <span>
+    非官方课程设计 · 素材版权归原权利人 · 历史内容展示
+   </span>
+   <a href="main.html">
+    返回首页
+   </a>
+  </footer>
+  <p aria-live="polite" class="toast" hidden="" id="site-status" role="status">
+  </p>
+ </body>
 </html>

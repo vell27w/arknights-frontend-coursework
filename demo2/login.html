@@ -1,47 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-    <link rel="stylesheet" href="loginCss.css">
-</head>
-<body>
-    <div class="login-container">
-        <div class="logo">
-            <img src="picture/logo.76a7eacc18f08a965dad.png" alt="Hypergryph Logo">
-        </div>
-        <form class="login-form" onsubmit="return validateForm()">
-            <div class="input-group">
-                <input type="text" id="username" placeholder="请输入账号">
-            </div>
-            <div class="input-group">
-                <input type="password" id="password" placeholder="请输入密码">
-            </div>
-            <div class="agreement">
-                <input type="checkbox" id="agreement">
-                <label for="agreement">已同意《用户注册协议》《个人信息保护政策》和《儿童个人信息保护政策》</label>
-            </div>
-            <button type="submit" class="submit-button">登录</button>
-        </form>
+<html lang="zh-CN">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   演示登录 · 明日方舟主题课设
+  </title>
+  <meta content="明日方舟游戏官网仿作，原生前端课程设计。非官方网站，内容为课程设计历史展示。" name="description"/>
+  <link href="assets/site.css" rel="stylesheet"/>
+  <script defer="True" src="assets/site.js">
+  </script>
+ </head>
+ <body class="page-login page-feature">
+  <a class="skip-link" href="#main-content">
+   跳到主要内容
+  </a>
+  <header class="navbar">
+   <a aria-label="返回首页" class="brand" href="main.html">
+    <img alt="明日方舟" decoding="async" loading="lazy" src="picture/Logo_明日方舟.svg"/>
+   </a>
+   <button aria-controls="site-nav" aria-expanded="false" class="menu-toggle" type="button">
+    菜单
+   </button>
+   <nav aria-label="主导航" class="navbar-center" id="site-nav">
+    <a class="nav-item" href="main.html">
+     <span class="en">
+      INDEX
+     </span>
+     <span class="cn">
+      首页
+     </span>
+    </a>
+    <a class="nav-item" href="info.html">
+     <span class="en">
+      INFORMATION
+     </span>
+     <span class="cn">
+      情报
+     </span>
+    </a>
+    <a class="nav-item" href="oper.html">
+     <span class="en">
+      OPERATOR
+     </span>
+     <span class="cn">
+      干员
+     </span>
+    </a>
+    <a class="nav-item" href="world.html">
+     <span class="en">
+      WORLD
+     </span>
+     <span class="cn">
+      设定
+     </span>
+    </a>
+    <a class="nav-item" href="media.html">
+     <span class="en">
+      MEDIA
+     </span>
+     <span class="cn">
+      泰拉万象
+     </span>
+    </a>
+    <a class="nav-item" href="more.html">
+     <span class="en">
+      MORE
+     </span>
+     <span class="cn">
+      更多内容
+     </span>
+    </a>
+   </nav>
+   <div class="navbar-right">
+    <button class="share-button" type="button">
+     分享
+    </button>
+    <a class="login-link" href="login.html">
+     演示登录
+    </a>
+   </div>
+  </header>
+  <main id="main-content" tabindex="-1">
+   <div class="login-container">
+    <div class="logo">
+     <img alt="Hypergryph Logo" decoding="async" height="192" loading="lazy" src="picture/logo.76a7eacc18f08a965dad.png" width="362"/>
     </div>
-</body>
-<script>
-    function validateForm() {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    if (username === '') {
-        alert('请填写账号');
-        return false;
-    }
-    if (password === '') {
-        alert('请填写密码');
-        return false;
-    }
-
-    location.href = 'main.html';
-    return false;
-}
-</script>
+    <form autocomplete="off" class="login-form" novalidate="">
+     <h1>
+      演示登录
+     </h1>
+     <p id="login-note">
+      仅用于展示表单校验。请使用虚构信息，不会发送或保存账号和密码。
+     </p>
+     <div class="input-group">
+      <label for="username">
+       演示账号
+      </label>
+      <input aria-describedby="login-note login-feedback" id="username" maxlength="64" placeholder="请输入账号" required="" type="text"/>
+     </div>
+     <div class="input-group">
+      <label for="password">
+       演示密码
+      </label>
+      <input aria-describedby="login-note login-feedback" id="password" maxlength="64" placeholder="请输入密码" required="" type="password"/>
+     </div>
+     <div class="agreement">
+      <input id="agreement" required="" type="checkbox"/>
+      <label for="agreement">
+       我理解这是演示表单，不会建立真实账号或登录会话
+      </label>
+     </div>
+     <button class="submit-button" type="submit">
+      验证演示表单
+     </button>
+     <p aria-live="polite" id="login-feedback" role="status">
+     </p>
+     <a class="back-link" href="main.html">
+      返回首页 →
+     </a>
+    </form>
+   </div>
+  </main>
+  <footer class="site-footer">
+   <span>
+    非官方课程设计 · 素材版权归原权利人 · 历史内容展示
+   </span>
+   <a href="main.html">
+    返回首页
+   </a>
+  </footer>
+  <p aria-live="polite" class="toast" hidden="" id="site-status" role="status">
+  </p>
+ </body>
 </html>

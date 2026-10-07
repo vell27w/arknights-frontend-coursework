@@ -1,154 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="info.css">
-</head>
-<body>
-    <div class="navbar">
-        <div class="navbar-left">
-            <div class="logoBox">
-                <img class="logo" src="picture/Logo_明日方舟.svg"></img>
-            </div>
-        </div>
-        <div class="navbar-center-right">
-            <div class="navbar-center">
-                <a href="main.html" class="nav-item">
-                    <div class="en">INDEX</div>
-                    <div class="cn">首页</div>
-                </a>
-                <a href="info.html" class="nav-item">
-                    <div class="en">INFORMATION</div>
-                    <div class="cn">情报</div>
-                </a>
-                <a href="oper.html" class="nav-item">
-                    <div class="en">OPERATOR</div>
-                    <div class="cn">干员</div>
-                </a>
-                <a href="world.html" class="nav-item">
-                    <div class="en">WORLD</div>
-                    <div class="cn">设定</div>
-                </a>
-                <a href="media.html" class="nav-item">
-                    <div class="en">MEDIA</div>
-                    <div class="cn">泰拉万象</div>
-                </a><a href="more.html" class="nav-item">
-                    <div class="en">MORE</div>
-                    <div class="cn">更多内容</div>
-                </a>
-            </div>
-            <div class="navbar-right">
-                <img class="icon" src="picture/分享.svg" alt="Icon 1">
-                <img class="icon" src="picture/音波音乐声音.svg" alt="Icon 2">
-                <img class="icon" src="picture/用户.svg" alt="Icon 3">
-            </div>
-        </div>
+<html lang="zh-CN">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   情报 · 明日方舟主题课设
+  </title>
+  <meta content="明日方舟游戏官网仿作，原生前端课程设计。非官方网站，内容为课程设计历史展示。" name="description"/>
+  <link href="assets/site.css" rel="stylesheet"/>
+  <script defer="True" src="assets/site.js">
+  </script>
+ </head>
+ <body class="page-info page-feature">
+  <a class="skip-link" href="#main-content">
+   跳到主要内容
+  </a>
+  <header class="navbar">
+   <a aria-label="返回首页" class="brand" href="main.html">
+    <img alt="明日方舟" decoding="async" src="picture/Logo_明日方舟.svg"/>
+   </a>
+   <button aria-controls="site-nav" aria-expanded="false" class="menu-toggle" type="button">
+    菜单
+   </button>
+   <nav aria-label="主导航" class="navbar-center" id="site-nav">
+    <a class="nav-item" href="main.html">
+     <span class="en">
+      INDEX
+     </span>
+     <span class="cn">
+      首页
+     </span>
+    </a>
+    <a aria-current="page" class="nav-item" href="info.html">
+     <span class="en">
+      INFORMATION
+     </span>
+     <span class="cn">
+      情报
+     </span>
+    </a>
+    <a class="nav-item" href="oper.html">
+     <span class="en">
+      OPERATOR
+     </span>
+     <span class="cn">
+      干员
+     </span>
+    </a>
+    <a class="nav-item" href="world.html">
+     <span class="en">
+      WORLD
+     </span>
+     <span class="cn">
+      设定
+     </span>
+    </a>
+    <a class="nav-item" href="media.html">
+     <span class="en">
+      MEDIA
+     </span>
+     <span class="cn">
+      泰拉万象
+     </span>
+    </a>
+    <a class="nav-item" href="more.html">
+     <span class="en">
+      MORE
+     </span>
+     <span class="cn">
+      更多内容
+     </span>
+    </a>
+   </nav>
+   <div class="navbar-right">
+    <button class="share-button" type="button">
+     分享
+    </button>
+    <a class="login-link" href="login.html">
+     演示登录
+    </a>
+   </div>
+  </header>
+  <main id="main-content" tabindex="-1">
+   <div class="container">
+    <div class="box-left">
+     <div aria-label="情报分类" class="tab-container" role="tablist">
+      <button aria-controls="panel-0" aria-selected="true" class="tab active" id="tab-0" role="tab" tabindex="0" type="button">
+       最新
+      </button>
+      <button aria-controls="panel-1" aria-selected="false" class="tab" id="tab-1" role="tab" tabindex="-1" type="button">
+       公告
+      </button>
+      <button aria-controls="panel-2" aria-selected="false" class="tab" id="tab-2" role="tab" tabindex="-1" type="button">
+       活动
+      </button>
+      <button aria-controls="panel-3" aria-selected="false" class="tab" id="tab-3" role="tab" tabindex="-1" type="button">
+       新闻
+      </button>
+     </div>
+     <div aria-labelledby="tab-0" class="content-container active" id="panel-0" role="tabpanel">
+      <a class="text" href="announce2.html">
+       2025 // 04 // 19
+       <br/>
+       《明日方舟》制作组通讯#52期
+      </a>
+      <a class="text" href="announce3.html">
+       2025 // 04 // 17
+       <br/>
+       【活动预告】SideStory「巴别塔」复刻即将开启
+      </a>
+      <span aria-label="2025 // 04 // 14 【明日方舟】04月14日16:00闪断更新公告（未收录详情）" class="text unavailable">
+       2025 // 04 // 14
+       <br/>
+       【明日方舟】04月14日16:00闪断更新公告
+       <small>
+        · 未收录详情
+       </small>
+      </span>
+      <a class="read-more" href="https://ak.hypergryph.com/" rel="noopener noreferrer" target="_blank">
+       前往官网查看最新内容
+      </a>
+     </div>
+     <div aria-labelledby="tab-1" class="content-container" hidden="" id="panel-1" role="tabpanel">
+      <a class="text" href="announce.html">
+       2025 // 04 // 01
+       <br/>
+       【明日方舟】04月01日16:00闪断更新公告
+      </a>
+      <span aria-label="2025 // 03 // 31 【明日方舟】游戏引擎升级说明（未收录详情）" class="text unavailable">
+       2025 // 03 // 31
+       <br/>
+       【明日方舟】游戏引擎升级说明
+       <small>
+        · 未收录详情
+       </small>
+      </span>
+      <span aria-label="2025 // 03 // 20 【明日方舟】关于清明节假期未成年游戏限时通知（未收录详情）" class="text unavailable">
+       2025 // 03 // 20
+       <br/>
+       【明日方舟】关于清明节假期未成年游戏限时通知
+       <small>
+        · 未收录详情
+       </small>
+      </span>
+      <a class="read-more" href="https://ak.hypergryph.com/" rel="noopener noreferrer" target="_blank">
+       前往官网查看最新内容
+      </a>
+     </div>
+     <div aria-labelledby="tab-2" class="content-container" hidden="" id="panel-2" role="tabpanel">
+      <a class="text" href="announce4.html">
+       2025 // 03 // 17
+       <br/>
+       【活动预告】促融共竞#1限时活动即将开启
+      </a>
+      <span aria-label="2025 // 03 // 31 「挽歌燃烧殆尽」创作征集活动（未收录详情）" class="text unavailable">
+       2025 // 03 // 31
+       <br/>
+       「挽歌燃烧殆尽」创作征集活动
+       <small>
+        · 未收录详情
+       </small>
+      </span>
+      <span aria-label="2025 // 03 // 20 SideStory「挽歌燃烧殆尽」限时活动即将开启（未收录详情）" class="text unavailable">
+       2025 // 03 // 20
+       <br/>
+       SideStory「挽歌燃烧殆尽」限时活动即将开启
+       <small>
+        · 未收录详情
+       </small>
+      </span>
+      <a class="read-more" href="https://ak.hypergryph.com/" rel="noopener noreferrer" target="_blank">
+       前往官网查看最新内容
+      </a>
+     </div>
+     <div aria-labelledby="tab-3" class="content-container" hidden="" id="panel-3" role="tabpanel">
+      <a class="text" href="announce5.html">
+       2025 // 04 // 01
+       <br/>
+       《明日方舟》制作组通讯#51期
+      </a>
+      <span aria-label="2025 // 03 // 31 《明日方舟》制作组通讯#50期（未收录详情）" class="text unavailable">
+       2025 // 03 // 31
+       <br/>
+       《明日方舟》制作组通讯#50期
+       <small>
+        · 未收录详情
+       </small>
+      </span>
+      <span aria-label="2025 // 03 // 20 《明日方舟》制作组通讯#49期（未收录详情）" class="text unavailable">
+       2025 // 03 // 20
+       <br/>
+       《明日方舟》制作组通讯#49期
+       <small>
+        · 未收录详情
+       </small>
+      </span>
+      <a class="read-more" href="https://ak.hypergryph.com/" rel="noopener noreferrer" target="_blank">
+       前往官网查看最新内容
+      </a>
+     </div>
     </div>
-    <div class="container">
-        <div class="box-left">
-            <div class="tab-container">
-                <div class="tab active" onclick="showContent(0)">最新</div>
-                <div class="tab" onclick="showContent(1)">公告</div>
-                <div class="tab" onclick="showContent(2)">活动</div>
-                <div class="tab" onclick="showContent(3)">新闻</div>
-            </div>
-            
-            <div class="content-container active">
-                <a href="announce2.html" class="text">2025 // 04 // 19<br>《明日方舟》制作组通讯#52期</a>
-                <a href="announce3.html" class="text">2025 // 04 // 17<br>【活动预告】SideStory「巴别塔」复刻即将开启</a>
-                <a href="#" class="text">2025 // 04 // 14<br>【明日方舟】04月14日16:00闪断更新公告</a>
-                <a href="#" class="read-more">READ MORE</a>
-            </div>
-            
-            <div class="content-container">
-                <a href="announce.html" class="text">2025 // 04 // 01<br>【明日方舟】04月01日16:00闪断更新公告</a>
-                <a href="#" class="text">2025 // 03 // 31<br>【明日方舟】游戏引擎升级说明</a>
-                <a href="#" class="text">2025 // 03 // 20<br>【明日方舟】关于清明节假期未成年游戏限时通知</a>
-                <a href="#" class="read-more">READ MORE</a>
-            </div>
-            
-            <div class="content-container">
-                <a href="announce4.html" class="text">2025 // 03 // 17<br>【活动预告】促融共竞#1限时活动即将开启</a>
-                <a href="#" class="text">2025 // 03 // 31<br>「挽歌燃烧殆尽」创作征集活动</a>
-                <a href="#" class="text">2025 // 03 // 20<br>SideStory「挽歌燃烧殆尽」限时活动即将开启</a>
-                <a href="#" class="read-more">READ MORE</a>
-            </div>
-            
-            <div class="content-container">
-                <a href="#" class="text">2025 // 04 // 01<br>《明日方舟》制作组通讯#51期</a>
-                <a href="#" class="text">2025 // 03 // 31<br>《明日方舟》制作组通讯#50期</a>
-                <a href="#" class="text">2025 // 03 // 20<br>《明日方舟》制作组通讯#49期</a>
-                <a href="#" class="read-more">READ MORE</a>
-            </div>
-        </div>
-        <div class="box-middle">
-            <div class="slide-container">
-                <img src="picture/slide1.jpg" alt="Slide 1" class="slide">
-                <img src="picture/slide2.png" alt="Slide 2" class="slide">
-                <img src="picture/slide3.png" alt="Slide 3" class="slide">
-                <img src="picture/slide4.png" alt="Slide 4" class="slide">
-            </div>
-        </div>
-        <div class="box-right"></div>
+    <div aria-label="活动海报轮播" class="box-middle" role="region">
+     <div class="slide-container">
+      <img alt="课程设计活动海报一" class="slide" decoding="async" height="749" src="picture/slide1.webp" width="1277"/>
+      <img alt="课程设计活动海报二" class="slide" decoding="async" height="749" hidden="" src="picture/slide2.webp" width="1277"/>
+      <img alt="课程设计活动海报三" class="slide" decoding="async" height="749" hidden="" src="picture/slide3.webp" width="1277"/>
+      <img alt="课程设计活动海报四" class="slide" decoding="async" height="749" hidden="" src="picture/slide4.webp" width="1277"/>
+     </div>
+     <div class="carousel-controls">
+      <button aria-label="上一张海报" data-slide="-1" type="button">
+       ←
+      </button>
+      <span aria-live="polite" id="slide-status">
+       1 / 4
+      </span>
+      <button aria-label="下一张海报" data-slide="1" type="button">
+       →
+      </button>
+      <button aria-pressed="false" id="carousel-pause" type="button">
+       暂停轮播
+      </button>
+     </div>
     </div>
-
-    <div class="bottom">
-        <div class="font">BREAKING NEWS</div>
+    <div class="box-right">
     </div>
-    
-</body>
-<script>
-    // 获取元素
-    const slideContainer = document.querySelector('.slide-container');
-    const slides = document.querySelectorAll('.slide');
-
-    let currentSlide = 0;
-
-    function moveToNextSlide() {
-        // 计算下一个图片的位置
-        const nextSlidePosition = -(currentSlide + 1) * 100 + '%';
-        
-        // 平滑移动到下一个图片
-        slideContainer.style.transform = `translateX(${nextSlidePosition})`;
-        
-        // 更新当前图片索引
-        currentSlide = (currentSlide + 1) % slides.length;
-
-        // 如果到达最后一张图片，则立即回到第一张
-        if (currentSlide === 0) {
-            slideContainer.style.transition = 'none'; // 关闭过渡动画
-            slideContainer.style.transform = 'translateX(0%)'; // 立即跳转到第一张
-            setTimeout(() => { // 重新开启过渡动画
-                slideContainer.style.transition = 'transform 0.5s ease';
-            }, 0);
-        }
-    }
-
-    // 每隔一定时间自动切换图片
-    setInterval(moveToNextSlide, 3000); // 每 3 秒切换一次
-
-
-    function showContent(index) {
-        const tabs = document.querySelectorAll('.tab');
-        const contents = document.querySelectorAll('.content-container');
-        
-        tabs.forEach((tab, i) => {
-            if (i === index) {
-                tab.classList.add('active');
-            } else {
-                tab.classList.remove('active');
-            }
-        });
-        
-        contents.forEach((content, i) => {
-            if (i === index) {
-                content.classList.add('active');
-            } else {
-                content.classList.remove('active');
-            }
-        });
-    }
-</script>
+   </div>
+   <div class="bottom">
+    <div class="font">
+     BREAKING NEWS
+    </div>
+   </div>
+  </main>
+  <footer class="site-footer">
+   <span>
+    非官方课程设计 · 素材版权归原权利人 · 历史内容展示
+   </span>
+   <a href="main.html">
+    返回首页
+   </a>
+  </footer>
+  <p aria-live="polite" class="toast" hidden="" id="site-status" role="status">
+  </p>
+ </body>
 </html>

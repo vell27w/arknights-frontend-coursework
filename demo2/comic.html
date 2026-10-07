@@ -1,126 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            display: flex;
-            margin: 0; /* 去除默认边距 */
-            height: 100vh; /* 让页面高度充满视口 */
-        }
-        .left {
-            flex: 7;
-            background-image: url('picture/comic1.jpg');
-            background-size: cover;
-            background-position: 10% center; /* 显示偏右 */
-            background-repeat: no-repeat;
-            position: relative;
-        }
-        .right{
-            flex: 3;
-            background-image: url('picture/bg.c03d00a6.jpg');
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .right img {
-            width: 80%;
-            height: auto;
-            object-fit: cover;
-            margin: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-         /* 底部定位Div样式 */
-         .bottom-div {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
- 
-        .header {
-            max-width: 60%;
-        }
- 
-        h1 {
-            font-size: 2em;
-            font-weight: bold;
-        }
- 
-        .subtitle {
-            font-size: 1.2em;
-        }
- 
-        .new {
-            color: red;
-            font-weight: bold;
-        }
- 
-        .content {
-            text-align: center;
-        }
- 
-        .read-button {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1.2em;
-            cursor: pointer;
-        }
- 
-        .chapter-info {
-            margin-top: 20px;
-        }
- 
-        .date, .network, .tags {
-            margin: 5px 0;
-        }
- 
-        
-    </style>
-</head>
-<body>
-    <div class="left">
-        <div class="bottom-div">
-            <div class="header">
-                <h1>暮岁闲谈：来拍电影吗</h1>
-                <p class="subtitle">这是否是比记忆更牢固的东西。</p>
-                <p class="new">NEW!</p>
-            </div>
-            <div class="content">
-                <a href="https://terra-historicus.hypergryph.com/comic/5033/episode/8639" target="_blank">
-                    <button class="read-button">开始阅读</button>
-                </a>
-                
-                <div class="chapter-info">
-                    <p>章节目录：</p>
-                    <p class="date">2025-1-28</p>
-                    <p class="network">鹰角网络</p>
-                    <p class="tags">轻松、日常、岁</p>
-                </div>
-            </div>
-        </div>
+<html lang="zh-CN">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   泰拉记事社 · 明日方舟主题课设
+  </title>
+  <meta content="明日方舟游戏官网仿作，原生前端课程设计。非官方网站，内容为课程设计历史展示。" name="description"/>
+  <link href="assets/site.css" rel="stylesheet"/>
+  <script defer="True" src="assets/site.js">
+  </script>
+ </head>
+ <body class="page-comic page-feature">
+  <a class="skip-link" href="#main-content">
+   跳到主要内容
+  </a>
+  <header class="navbar">
+   <a aria-label="返回首页" class="brand" href="main.html">
+    <img alt="明日方舟" decoding="async" loading="lazy" src="picture/Logo_明日方舟.svg"/>
+   </a>
+   <button aria-controls="site-nav" aria-expanded="false" class="menu-toggle" type="button">
+    菜单
+   </button>
+   <nav aria-label="主导航" class="navbar-center" id="site-nav">
+    <a class="nav-item" href="main.html">
+     <span class="en">
+      INDEX
+     </span>
+     <span class="cn">
+      首页
+     </span>
+    </a>
+    <a class="nav-item" href="info.html">
+     <span class="en">
+      INFORMATION
+     </span>
+     <span class="cn">
+      情报
+     </span>
+    </a>
+    <a class="nav-item" href="oper.html">
+     <span class="en">
+      OPERATOR
+     </span>
+     <span class="cn">
+      干员
+     </span>
+    </a>
+    <a class="nav-item" href="world.html">
+     <span class="en">
+      WORLD
+     </span>
+     <span class="cn">
+      设定
+     </span>
+    </a>
+    <a class="nav-item" href="media.html">
+     <span class="en">
+      MEDIA
+     </span>
+     <span class="cn">
+      泰拉万象
+     </span>
+    </a>
+    <a aria-current="page" class="nav-item" href="more.html">
+     <span class="en">
+      MORE
+     </span>
+     <span class="cn">
+      更多内容
+     </span>
+    </a>
+   </nav>
+   <div class="navbar-right">
+    <button class="share-button" type="button">
+     分享
+    </button>
+    <a class="login-link" href="login.html">
+     演示登录
+    </a>
+   </div>
+  </header>
+  <main id="main-content" tabindex="-1">
+   <div class="left">
+    <div class="bottom-div">
+     <div class="header">
+      <h1>
+       暮岁闲谈：来拍电影吗
+      </h1>
+      <p class="subtitle">
+       这是否是比记忆更牢固的东西。
+      </p>
+      <p class="new">
+       NEW!
+      </p>
+     </div>
+     <div class="content">
+      <a class="read-button" href="https://terra-historicus.hypergryph.com/comic/5033/episode/8639" rel="noopener noreferrer" target="_blank">
+       开始阅读
+      </a>
+      <div class="chapter-info">
+       <p>
+        章节目录：
+       </p>
+       <p class="date">
+        2025-1-28
+       </p>
+       <p class="network">
+        鹰角网络
+       </p>
+       <p class="tags">
+        轻松、日常、岁
+       </p>
+      </div>
+     </div>
     </div>
-    <div class="right">
-        <img src="picture/comic2.png" alt="图片1">
-        <img src="picture/comic3.png" alt="图片2">
-        <img src="picture/comic4.png" alt="图片3">
-    </div>
-    
-</body>
+   </div>
+   <div class="right">
+    <img alt="泰拉记事社展示图片" decoding="async" height="325" loading="lazy" src="picture/comic2.webp" width="962"/>
+    <img alt="泰拉记事社展示图片" decoding="async" height="325" loading="lazy" src="picture/comic3.webp" width="962"/>
+    <img alt="泰拉记事社展示图片" decoding="async" height="325" loading="lazy" src="picture/comic4.webp" width="962"/>
+   </div>
+  </main>
+  <footer class="site-footer">
+   <span>
+    非官方课程设计 · 素材版权归原权利人 · 历史内容展示
+   </span>
+   <a href="main.html">
+    返回首页
+   </a>
+  </footer>
+  <p aria-live="polite" class="toast" hidden="" id="site-status" role="status">
+  </p>
+ </body>
 </html>

@@ -1,0 +1,6 @@
+*.docx
+node_modules/
+artifacts/
+__pycache__/
+.DS_Store
+Thumbs.db

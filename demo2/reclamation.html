@@ -1,79 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>生息演算</title>
-  <style>
-    body, html {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-image: url('picture/reclamation.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    .container {
-        color: white;
-      width: 500px;
-      height: 500px;
-      border-radius: 50%; /* 圆形 */
-      
-      background-color: rgba(0, 0, 0, 0.3); /* 半透明背景 */
-      padding: 20px;
-      box-shadow: 0 0 20px #898a46fe;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    h1, h2, p {
-      margin: 5px 0;
-    }
-    h1 {
-        font-size: 12px;
-    }
-    h2 {
-        font-size: 60px;
-    }
-    p.zh-CN {
-        font-size: 40px;
-    }
-    p.en {
-        font-size: 10px;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: transparent;
-      color: white;
-      border: 2px solid white;
-      cursor: pointer;
-      margin-top: 20px;
-      border-radius: 20px;
-    }
-
-    button:hover {
-      background-color: white;
-      color: #1a1a1a;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>TALES WITHIN</h1>
-    <h2>T H E  S Λ N D</h2>
-    <p class="zh-CN">沙洲遗闻</p>
-    <p class="en">Reclamation Algorithm</p>
-    <button>登录查看生存天数</button>
-  </div>
-</body>
+<html lang="zh-CN">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   沙洲遗闻 · 明日方舟主题课设
+  </title>
+  <meta content="明日方舟游戏官网仿作，原生前端课程设计。非官方网站，内容为课程设计历史展示。" name="description"/>
+  <link href="assets/site.css" rel="stylesheet"/>
+  <script defer="True" src="assets/site.js">
+  </script>
+ </head>
+ <body class="page-reclamation page-feature">
+  <a class="skip-link" href="#main-content">
+   跳到主要内容
+  </a>
+  <header class="navbar">
+   <a aria-label="返回首页" class="brand" href="main.html">
+    <img alt="明日方舟" decoding="async" loading="lazy" src="picture/Logo_明日方舟.svg"/>
+   </a>
+   <button aria-controls="site-nav" aria-expanded="false" class="menu-toggle" type="button">
+    菜单
+   </button>
+   <nav aria-label="主导航" class="navbar-center" id="site-nav">
+    <a class="nav-item" href="main.html">
+     <span class="en">
+      INDEX
+     </span>
+     <span class="cn">
+      首页
+     </span>
+    </a>
+    <a class="nav-item" href="info.html">
+     <span class="en">
+      INFORMATION
+     </span>
+     <span class="cn">
+      情报
+     </span>
+    </a>
+    <a class="nav-item" href="oper.html">
+     <span class="en">
+      OPERATOR
+     </span>
+     <span class="cn">
+      干员
+     </span>
+    </a>
+    <a class="nav-item" href="world.html">
+     <span class="en">
+      WORLD
+     </span>
+     <span class="cn">
+      设定
+     </span>
+    </a>
+    <a class="nav-item" href="media.html">
+     <span class="en">
+      MEDIA
+     </span>
+     <span class="cn">
+      泰拉万象
+     </span>
+    </a>
+    <a aria-current="page" class="nav-item" href="more.html">
+     <span class="en">
+      MORE
+     </span>
+     <span class="cn">
+      更多内容
+     </span>
+    </a>
+   </nav>
+   <div class="navbar-right">
+    <button class="share-button" type="button">
+     分享
+    </button>
+    <a class="login-link" href="login.html">
+     演示登录
+    </a>
+   </div>
+  </header>
+  <main id="main-content" tabindex="-1">
+   <div class="container">
+    <h1>
+     TALES WITHIN
+    </h1>
+    <h2>
+     T H E  S Λ N D
+    </h2>
+    <p class="zh-CN">
+     沙洲遗闻
+    </p>
+    <p class="en">
+     Reclamation Algorithm
+    </p>
+    <p class="feature-note">
+     课设展示页 · 未实现游戏数据查询
+    </p>
+    <a class="action-link" href="more.html">
+     返回更多内容 →
+    </a>
+   </div>
+  </main>
+  <footer class="site-footer">
+   <span>
+    非官方课程设计 · 素材版权归原权利人 · 历史内容展示
+   </span>
+   <a href="main.html">
+    返回首页
+   </a>
+  </footer>
+  <p aria-live="polite" class="toast" hidden="" id="site-status" role="status">
+  </p>
+ </body>
 </html>
